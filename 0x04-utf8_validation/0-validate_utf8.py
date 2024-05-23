@@ -3,7 +3,11 @@
 
 
 def validUTF8(data):
-    '''Validates data as per UTF-8'''
+    '''Validates data as per UTF-8
+    This validation only validate an integer between range 0
+    to 127. Returns True if validated and false if otherwise
+    Arg:
+        data: List of integer element'''
     if not data or all(type(datum) != int for datum in data):
         return False
 
